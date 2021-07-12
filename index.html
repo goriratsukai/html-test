@@ -1,6 +1,4 @@
 <html>
-<script type="text/javascript" src="novel.json"></script>
-
 <head>
     <title>test</title>
     <link rel="stylesheet" type="text/css" href="index.css">
@@ -36,10 +34,9 @@
         </p>
     </h3>
     <script>
-        const json = "novel.json"
-        const novel_data = JSON.parse(novel.json)
-        var novel_title = novel_data[0].title;
-        document.getElementById("title").innerText = novel_data
+        const fs = require("fs-extra")
+        const novel = fs.readJsonSync("./test.json")
+        console.log(novel.title)
     </script>
     <p id="title"></p>
 </body>
