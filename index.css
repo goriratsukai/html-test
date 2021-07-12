@@ -1,3 +1,9 @@
-body{
+h1{
     color : red;
+}
+
+body{
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-indent: 1em;
 }

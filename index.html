@@ -1,9 +1,46 @@
 <html>
-    <head>
-        <title>test</title>
-        <link rel="stylesheet" type="text/css" href="index.css">
-    </head>
-    <body>
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaアルファベット
-    </body>
-</ html>
+<script type="text/javascript" src="novel.json"></script>
+
+<head>
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <h1>
+        <ruby>
+            紫陽花
+            <rt>アジサイ</rt>
+        </ruby>
+        <ruby>
+            ルビテスト
+            <rt>ruby test</rt>
+        </ruby>
+        <ruby>
+            超長い
+            <rt>ultra super long ruby</rt>
+        </ruby>
+        <ruby>
+            ルビの方が極端に短い例
+            <rt>ruby</rt>
+        </ruby>
+    </h1>
+    <h3>
+        <p>
+            縦書き表示のテスト
+        </p>
+        <p>
+            arufabetto no hyouji tesuto</p>
+        <p>
+            一行に入らないくらい長文を出力する際に、改行と字下げが行われるかのテスト用の文章。書きながら思ったけど、ブラウザウィンドウの縦をめっちゃ縮めたらこんなに長文を書かなくても良かったのではと思った。ついでに文中にalphabetが出てきたときの表示もcheck!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        </p>
+    </h3>
+    <script>
+        const json = "novel.json"
+        const novel_data = JSON.parse(novel.json)
+        var novel_title = novel_data[0].title;
+        document.getElementById("title").innerText = novel_data
+    </script>
+    <p id="title"></p>
+</body>
+</html>
